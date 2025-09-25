@@ -1,1 +1,1 @@
-# world-relay_game
+[데모 사이트](https://ServerMana.github.io/word-relay-game)
