@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>끝말잇기-박근환</title>
+    <link rel="stylesheet" href="css/word-relay.css">
+  </head>
+
+  <body>
+    <div class="game-container">
+      <!-- 게임 헤더 -->
+      <div class="header">
+        <h1>끝말잇기</h1>
+      </div>
+
+      <!-- 게임 정보 영역 -->
+      <div class="game-info">
+        <div class="info-box">
+          <div class="info-label">현재 순서</div>
+          <div class="info-value"><span id="order">1</span> 참가자</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">제시어</div>
+          <div class="info-value"><span id="word">-</span></div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">남은 시간</div>
+          <div class="info-value" id="timer">10초</div>
+        </div>
+      </div>
+
+      <!-- 캐릭터 영역 -->
+      <div class="character-area">
+        <div class="character-box">
+          <div class="character">🏎️</div>
+          <div class="info-label">현재 플레이어</div>
+          <div class="info-value" id="current-player-name">대기중</div>
+        </div>
+      </div>
+
+      <!-- 입력 영역 -->
+      <div class="input-area">
+        <input type="text" placeholder="단어를 입력하세요">
+        <br>
+        <button>입력</button>
+      </div>
+
+      <!-- 순위 표시 영역 -->
+      <div class="ranking-area" id="ranking-area">
+        <!-- 동적으로 생성될 순위 카드들 -->
+      </div>
+    </div>
+    
+    <script src="js/word-relay.js"></script>
+  </body>
+</html>
