@@ -7,50 +7,76 @@
   </head>
 
   <body>
+    <!-- 사이드바 -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>🎯 게임 규칙</h3>
+      </div>
+      <div class="sidebar-content">
+        <div class="rules-section">
+          <ul>
+            <li>✅ 제시된 단어의 마지막 글자로 시작하는 단어를 입력하세요</li>
+            <li>✅ 이미 사용한 단어와 한 글자 단어, 공백은 사용할 수 없습니다</li>
+            <li>✅ 규칙을 어기면 해당 참가자는 탈락합니다</li>
+            <li>✅ 최후의 1인이 승리합니다!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="game-container">
       <!-- 게임 헤더 -->
       <div class="header">
         <h1>끝말잇기</h1>
+        <button class="rules-btn" id="rules-btn">게임 규칙</button>
       </div>
 
       <!-- 게임 정보 영역 -->
       <div class="game-info">
-        <div class="info-box">
-          <div class="info-label">현재 순서</div>
-          <div class="info-value"><span id="order">1</span> 참가자</div>
+        <div class="game-status" id="game-status">
+          <span class="mode-display" id="mode-display">게임 준비 중...</span>
+          <span class="current-player" id="current-player-display">현재 차례: -</span>
         </div>
-        <div class="info-box">
-          <div class="info-label">제시어</div>
-          <div class="info-value"><span id="word">-</span></div>
-        </div>
-        <div class="info-box">
-          <div class="info-label">남은 시간</div>
-          <div class="info-value" id="timer">10초</div>
+        <div class="timer-display" id="timer-display">
+          <span class="timer-label">남은 시간:</span>
+          <span class="timer-value" id="timer-value">--</span>
+          <span class="timer-unit">초</span>
         </div>
       </div>
 
-      <!-- 캐릭터 영역 -->
-      <div class="character-area">
-        <div class="character-box">
-          <div class="character">🏎️</div>
-          <div class="info-label">현재 플레이어</div>
-          <div class="info-value" id="current-player-name">대기중</div>
-        </div>
-      </div>
-
-      <!-- 입력 영역 -->
+      <!-- 입력 영역 (맨 위로 이동) -->
       <div class="input-area">
-        <input type="text" placeholder="단어를 입력하세요">
-        <br>
-        <button>입력</button>
+        <div class="input-wrapper">
+          <input type="text" placeholder="단어를 입력하세요" id="word-input">
+          <button id="submit-btn">입력</button>
+        </div>
       </div>
 
-      <!-- 순위 표시 영역 -->
-      <div class="ranking-area" id="ranking-area">
-        <!-- 동적으로 생성될 순위 카드들 -->
+      <!-- 현재 제시어 표시 -->
+      <div class="current-word-area">
+        <div class="current-word-display" id="current-word-display">
+          <span class="current-word-label">현재 제시어:</span>
+          <span class="current-word" id="current-word">게임 시작 전</span>
+        </div>
+      </div>
+
+      <!-- 단어 기록 영역 -->
+      <div class="word-record-area">
+        <div class="section-title">📝 단어 기록</div>
+        <div class="word-record-list" id="word-record-list">
+          <div class="record-placeholder">아직 입력된 단어가 없습니다</div>
+        </div>
+      </div>
+
+      <!-- 플레이어 영역 (캐릭터 + 점수 통합) -->
+      <div class="players-section">
+        <div class="section-title">👥 플레이어</div>
+        <div class="players-area" id="players-area">
+          <!-- 동적으로 생성될 플레이어 캐릭터들 (점수 포함) -->
+        </div>
       </div>
     </div>
-    
+
     <script src="js/word-relay.js"></script>
   </body>
 </html>
